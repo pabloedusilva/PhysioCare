@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysioHome & Care - Fisioterapia Domiciliar</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Tela Inicial/Home -->
+    <div id="homeScreen" class="screen active">
+        <div class="home-container">
+            <div class="home-content">
+                <div class="logo-section">
+                    <img src="assets/images/logo.jpeg" alt="PhysioHome & Care" class="brand-logo" />
+                    <h1 class="brand-name">PhysioHome & Care</h1>
+                    <p class="brand-tagline">Fisioterapia profissional no conforto da sua casa</p>
+                    <p class="motto">“Cuidar de você é nossa prioridade.”</p>
+                </div>
+                
+                <div class="hero-section">
+                    <h2 class="hero-title">Cuidado completo, humano e personalizado</h2>
+                    <p class="hero-description">
+                        Atendemos presencialmente na clínica e também no conforto da sua casa (domiciliar),
+                        sempre com foco em resultado e bem-estar. Planos individualizados, tecnologias
+                        modernas e acompanhamento de ponta a ponta.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-hospital"></i>
+                        <h3>Atendimento Presencial</h3>
+                        <p>Clínica equipada e segura, com conforto e qualidade</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Agendamento Fácil</h3>
+                        <p>Marque consultas com praticidade</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Atendimento Domiciliar</h3>
+                        <p>Profissionais qualificados na sua casa</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Acompanhamento</h3>
+                        <p>Monitore sua evolução em tempo real</p>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="showLoginScreen()">
+                        <i class="fas fa-sign-in-alt"></i> Entrar
+                    </button>
+                    <button class="btn btn-secondary" onclick="showRegisterScreen()">
+                        <i class="fas fa-user-plus"></i> Criar Conta
+                    </button>
+                    <a href="#profissionais" class="btn btn-success">
+                        <i class="fas fa-user-md"></i> Conhecer Profissionais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header (aparece apenas na Home) -->
+    <header class="landing-header">
+        <div class="nav-inner">
+            <a href="#homeScreen" class="nav-brand"><img src="assets/images/logo.jpeg" alt="Logo" class="brand-logo-sm"/> PhysioHome & Care</a>
+            <nav class="nav-links">
+                <a href="#sobre">Sobre nós</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#especialidades">Especialidades</a>
+                <a href="#profissionais">Profissionais</a>
+                <a href="#depoimentos">Depoimentos</a>
+            </nav>
+            <div class="nav-cta">
+                <button class="btn btn-secondary" onclick="showLoginScreen()">Entrar</button>
+                <button class="btn btn-primary" onclick="showRegisterScreen()">Agendar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre nós -->
+    <section id="sobre" class="landing-section">
+        <div class="landing-container">
+            <header class="section-header-home">
+                <h2><i class="fas fa-hand-holding-heart"></i> Sobre nós</h2>
+            </header>
+            <div style="max-width:900px;margin:0 auto;text-align:center;font-size:1.05rem;color:var(--text-secondary);line-height:1.9">
+                Nossa clínica oferece um atendimento humanizado, voltado para o bem-estar físico e emocional de cada paciente. 
+                Acreditamos que cada pessoa merece um olhar individualizado, com empatia e dedicação em cada etapa do tratamento. 
+                Nossa equipe multidisciplinar está preparada para proporcionar cuidados de excelência, promovendo saúde e qualidade de vida.
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="landing-section">
+        <div class="landing-container">
+            <header class="section-header-home">
+                <h2><i class="fas fa-images"></i> Nossa Galeria</h2>
+                <p>Conheça nossa equipe e ambiente de cuidado.</p>
+            </header>
+            <div id="galleryGrid" class="gallery-grid"></div>
+        </div>
+    </section>
+
+    <!-- Landing - Especialidades e Profissionais -->
+    <section id="especialidades" class="landing-section">
+        <div class="landing-container">
+            <header class="section-header-home">
+                <h2><i class="fas fa-stethoscope"></i> Nossas Especialidades</h2>
+                <p>Tratamentos completos e personalizados, com atendimento presencial e domiciliar.</p>
+            </header>
+
+            <div class="spec-grid">
+                <div class="spec-card">
+                    <span class="spec-icon"><i class="fas fa-bone"></i></span>
+                    <h3>Traumato-Ortopédica</h3>
+                    <p>Reabilitação musculoesquelética e pós-operatório.</p>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon"><i class="fas fa-brain"></i></span>
+                    <h3>Neurofuncional</h3>
+                    <p>AVC, Parkinson, paralisias e distúrbios do sistema nervoso.</p>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon"><i class="fas fa-dumbbell"></i></span>
+                    <h3>Esportiva</h3>
+                    <p>Prevenção de lesões e retorno seguro ao esporte.</p>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon"><i class="fas fa-child"></i></span>
+                    <h3>Pediátrica</h3>
+                    <p>Apoio ao desenvolvimento motor infantil com cuidado.</p>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon"><i class="fas fa-person-cane"></i></span>
+                    <h3>Geriátrica</h3>
+                    <p>Autonomia, equilíbrio e prevenção de quedas no idoso.</p>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon"><i class="fas fa-venus"></i></span>
+                    <h3>Pélvica</h3>
+                    <p>Saúde pélvica feminina com foco preventivo e funcional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profissionais" class="landing-section">
+        <div class="landing-container">
+            <header class="section-header-home">
+                <h2><i class="fas fa-user-nurse"></i> Nossos Profissionais</h2>
+                <p>Equipe qualificada, atendimento humanizado e resultados comprovados.</p>
+            </header>
+
+            <div class="pros-grid">
+                <article class="pro-card fade-in-scale">
+                    <div class="pro-photo">
+                        <img src="assets/images/profissionais/Ana Paula.jpg" alt="Fisioterapeuta Ana Paula Miranda" loading="lazy">
+                    </div>
+                    <h3 class="pro-name">Dra. Ana Paula Miranda</h3>
+                    <p class="pro-role">Traumato-Ortopédica</p>
+                </article>
+                <article class="pro-card fade-in-scale">
+                    <div class="pro-photo">
+                        <img src="assets/images/profissionais/Isadora Fróis.jpg" alt="Fisioterapeuta Isadora Fróis Campos" loading="lazy">
+                    </div>
+                    <h3 class="pro-name">Dra. Isadora Fróis Campos</h3>
+                    <div class="crefito-badge"><i class="fas fa-id-card"></i> CREFITO A06170417</div>
+                    <p class="pro-role">Neurofuncional</p>
+                </article>
+                <article class="pro-card fade-in-scale">
+                    <div class="pro-photo">
+                        <img src="assets/images/profissionais/Gabriela.jpg" alt="Fisioterapeuta Gabriela Lopes Vieira" loading="lazy">
+                    </div>
+                    <h3 class="pro-name">Dra. Gabriela Lopes Vieira</h3>
+                    <p class="pro-role">Neurofuncional</p>
+                </article>
+                <article class="pro-card fade-in-scale">
+                    <div class="pro-photo">
+                        <img src="assets/images/profissionais/Meressa.jpg" alt="Fisioterapeuta Maressa Laporte de Andrade" loading="lazy">
+                    </div>
+                    <h3 class="pro-name">Dra. Maressa Laporte de Andrade</h3>
+                    <div class="crefito-badge"><i class="fas fa-id-card"></i> CREFITO A06170055</div>
+                    <p class="pro-role">Geriátrica</p>
+                </article>
+                <article class="pro-card fade-in-scale">
+                    <div class="pro-photo">
+                        <img src="assets/images/profissionais/Raniele.jpg" alt="Fisioterapeuta Raniele das Neves Soares" loading="lazy">
+                    </div>
+                    <h3 class="pro-name">Dra. Raniele das Neves Soares</h3>
+                    <div class="crefito-badge"><i class="fas fa-id-card"></i> CREFITO A06167218</div>
+                    <p class="pro-role">Traumato-Ortopédica e Esportiva</p>
+                </article>
+                <article class="pro-card fade-in-scale">
+                    <div class="pro-photo">
+                        <img src="assets/images/profissionais/Erika.jpg" alt="Fisioterapeuta Érika Marcondes Caldeira" loading="lazy">
+                    </div>
+                    <h3 class="pro-name">Dra. Érika Marcondes Caldeira</h3>
+                    <div class="crefito-badge"><i class="fas fa-id-card"></i> CREFITO A06170683</div>
+                    <p class="pro-role">Preventiva, Funcional e Pélvica</p>
+                </article>
+            </div>
+
+            <div class="cta-center">
+                <a href="#homeScreen" class="btn btn-primary">
+                    <i class="fas fa-calendar-plus"></i> Agendar uma Avaliação
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="landing-section">
+        <div class="landing-container">
+            <header class="section-header-home">
+                <h2><i class="fas fa-star"></i> Depoimentos</h2>
+                <p>O que nossos pacientes dizem sobre a experiência.</p>
+            </header>
+            <div class="testimonials-grid">
+                <blockquote class="testimonial">
+                    <p>“Depois de duas semanas já sentia mais mobilidade e bem menos dor. Atendimento impecável!”</p>
+                    <footer>— Maria S.</footer>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>“O plano esportivo acelerou meu retorno aos treinos com segurança. Super recomendo.”</p>
+                    <footer>— João P.</footer>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>“Equipe atenciosa e muito qualificada. Acompanharam minha evolução de perto.”</p>
+                    <footer>— Ana C.</footer>
+                </blockquote>
+            </div>
+            <div class="cta-center">
+                <button class="btn btn-success" onclick="showRegisterScreen()">
+                    <i class="fas fa-hand-holding-heart"></i> Começar Minha Recuperação
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="landing-container footer-inner">
+            <div class="footer-brand">
+                <i class="fas fa-heartbeat"></i>
+                <span>PhysioHome & Care</span>
+            </div>
+            <div class="footer-links">
+                <a href="#especialidades">Especialidades</a>
+                <a href="#profissionais">Profissionais</a>
+                <a href="#depoimentos">Depoimentos</a>
+            </div>
+            <p class="footer-copy">© <span id="yearNow"></span> PhysioHome & Care — Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Tela de Login -->
+    <div id="loginScreen" class="screen">
+        <div class="auth-container">
+            <div class="auth-box">
+                <div class="auth-header">
+                    <i class="fas fa-heartbeat"></i>
+                    <h2>Entrar</h2>
+                    <p>Acesse sua conta PhysioHome & Care</p>
+                </div>
+                
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">
+                            <i class="fas fa-envelope"></i> E-mail
+                        </label>
+                        <input type="email" id="loginEmail" required placeholder="seu@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">
+                            <i class="fas fa-lock"></i> Senha
+                        </label>
+                        <input type="password" id="loginPassword" required placeholder="••••••••">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Lembrar de mim</label>
+                    </div>
+
+                    <div id="loginError" class="error-message"></div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-sign-in-alt"></i> Entrar
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Não tem uma conta? 
+                        <a href="#" onclick="showRegisterScreen(); return false;">Criar conta</a>
+                    </p>
+                    <p>
+                        <a href="#" onclick="showHomeScreen(); return false;">
+                            <i class="fas fa-arrow-left"></i> Voltar
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div id="registerScreen" class="screen">
+        <div class="auth-container">
+            <div class="auth-box">
+                <div class="auth-header">
+                    <i class="fas fa-user-plus"></i>
+                    <h2>Criar Conta</h2>
+                    <p>Cadastre-se gratuitamente</p>
+                </div>
+                
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="registerName">
+                            <i class="fas fa-user"></i> Nome Completo
+                        </label>
+                        <input type="text" id="registerName" required placeholder="Seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">
+                            <i class="fas fa-envelope"></i> E-mail
+                        </label>
+                        <input type="email" id="registerEmail" required placeholder="seu@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerPassword">
+                            <i class="fas fa-lock"></i> Senha
+                        </label>
+                        <input type="password" id="registerPassword" required placeholder="Mínimo 6 caracteres">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerType">
+                            <i class="fas fa-user-tag"></i> Tipo de Usuário
+                        </label>
+                        <select id="registerType" required>
+                            <option value="">Selecione...</option>
+                            <option value="paciente">Paciente</option>
+                            <option value="fisioterapeuta">Fisioterapeuta</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="acceptTerms" required>
+                        <label for="acceptTerms">
+                            Aceito os <a href="#" onclick="return false;">termos de uso</a> e 
+                            <a href="#" onclick="return false;">política de privacidade</a>
+                        </label>
+                    </div>
+
+                    <div id="registerError" class="error-message"></div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-user-plus"></i> Criar Conta
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Já tem uma conta? 
+                        <a href="#" onclick="showLoginScreen(); return false;">Entrar</a>
+                    </p>
+                    <p>
+                        <a href="#" onclick="showHomeScreen(); return false;">
+                            <i class="fas fa-arrow-left"></i> Voltar
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard (será carregado dinamicamente) -->
+    <div id="dashboardScreen" class="screen">
+        <!-- Conteúdo será carregado via JavaScript -->
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
