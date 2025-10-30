@@ -70,9 +70,9 @@ function initializeApp() {
     const fisios = [
         {
             id: 1,
-            nome: 'Ana Paula Miranda',
-            especialidade: 'Traumato-Ortopédica',
-            crf: null,
+                nome: 'Ana Paula Miranda',
+                especialidade: 'Fisioterapeuta',
+                crf: 'A06170363',
             foto: 'assets/images/profissionais/Ana Paula.jpg'
         },
         {
@@ -84,9 +84,9 @@ function initializeApp() {
         },
         {
             id: 3,
-            nome: 'Gabriela Lopes Vieira',
-            especialidade: 'Neurofuncional',
-            crf: null,
+                nome: 'Gabriela Lopes Vieira',
+                especialidade: 'Fisioterapia Neurofuncional',
+                crf: 'A06170434',
             foto: 'assets/images/profissionais/Gabriela.jpg'
         },
         {
@@ -111,7 +111,7 @@ function initializeApp() {
             foto: 'assets/images/profissionais/Erika.jpg'
         }
     ];
-    const fisiosVersion = '3';
+    const fisiosVersion = '4';
     const currentVersion = localStorage.getItem('fisios_version');
     if (currentVersion !== fisiosVersion) {
         localStorage.setItem('fisioterapeutas', JSON.stringify(fisios));
